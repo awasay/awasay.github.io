@@ -1,3 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond); /* GOOGLE FREE FONTS */
+
+body {
+    font-family: "EB Garamond", sans-serif;
+}
+
 .icon-tab {
     margin-top: 30px;
   
@@ -85,3 +91,13 @@
 .nav{
     font-size: 20px;
 }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: gray;
+    color: white;
+    text-align: center;
+  }
