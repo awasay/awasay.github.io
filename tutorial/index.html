@@ -1,0 +1,148 @@
+
+
+<!doctype html>
+</body>
+</html>
+<html>
+	<head>
+		<title>Bibliography Explorer</title>
+		<link rel="stylesheet" href="./style/bib-publication-list.css"/>
+        <link rel="stylesheet" href="./style/tabs.css"/>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript" src="build/bib-list.js"></script>
+        <script type="text/javascript" src="build/tabs.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+		    $(document).ready(function() {
+        	bibtexify("./bib/1_accuracy_time.bib", "avt_table", {'visualization': 0});
+            bibtexify("./bib/1_optimization_time.bib", "ovt_table", {'visualization': 0});
+            bibtexify("./bib/1_memory_time.bib", "mvt_table", {'visualization': 0});
+            //    
+            bibtexify("./bib/2_query.bib", "query_table", {'visualization': 0});
+            bibtexify("./bib/2_access.bib", "access_table", {'visualization': 0});
+            bibtexify("./bib/2_explore.bib", "explore_table", {'visualization': 0});
+            //
+            bibtexify("./bib/3_fair.bib", "fair_table", {'visualization': 0});
+            bibtexify("./bib/3_interpretible.bib", "interpretible_table", {'visualization': 0});
+            bibtexify("./bib/3_environment.bib", "environment_table", {'visualization': 0});
+
+    		});
+		</script>
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+            <div class="icon-tab col-xs-12 col-sm-2 col-sm-offset-3 active">
+                <span class="glyphicon glyphicon-sunglasses"></span>
+                <span class="icon-label">Deep Learning through a Systems Lens</span>
+            </div>
+            <div class="icon-tab col-xs-12 col-sm-2 ">
+                <span class="glyphicon glyphicon-education"></span>
+                <span class="icon-label">Deep Learning in Data Systems</span>
+            </div>
+            <div class="icon-tab col-xs-12 col-sm-2">
+                <span class="glyphicon glyphicon-leaf"></span>
+                <span class="icon-label">Responsible Deep Learning</span>
+            </div>
+            </div> 
+        </div>
+        
+        <!-- Your elements -->
+        <div class="item col-sm-10 col-sm-offset-1">
+            <div class="panel">
+                    <br>
+                    <ul class="nav nav-pills">
+                      <li class="active"><a data-toggle="tab" href="#avt">Accuracy vs. Time Efficiency</a></li>
+                      <li><a data-toggle="tab" href="#ovt">Optimization vs. Time Efficiency</a></li>
+                      <li><a data-toggle="tab" href="#mvt">Memory vs. Time Efficiency</a></li>
+                    </ul>
+                  
+                    <div class="tab-content">
+                      <div id="avt" class="tab-pane fade in active">
+                        <br>
+                        <div class="table-responsive">
+                            <table id="avt_table" class="display"></table>
+                        </div>
+                      </div>
+                      <div id="ovt" class="tab-pane fade">
+                        <br>
+                        <div class="table-responsive">
+                            <table id="ovt_table" class="display"></table>
+                        </div>
+                      </div>
+                      <div id="mvt" class="tab-pane fade">
+                        <br>
+                        <div class="table-responsive">
+                            <table id="mvt_table" class="display"></table>
+                        </div>
+                      </div>
+                    </div>
+            </div>    
+        </div>
+            
+        <div class="item col-sm-10 col-sm-offset-1">
+            <div class="panel">
+                <br>
+                <ul class="nav nav-pills">
+                  <li class="active"><a data-toggle="tab" href="#query">Query Optimization</a></li>
+                  <li><a data-toggle="tab" href="#access">Access Methods</a></li>
+                  <li><a data-toggle="tab" href="#explore">Data Exploration</a></li>
+                </ul>
+              
+                <div class="tab-content">
+                  <div id="query" class="tab-pane fade in active">
+                    <br>
+                    <div class="table-responsive">
+                        <table id="query_table" class="display"></table>
+                    </div>
+                  </div>
+                  <div id="access" class="tab-pane fade">
+                    <br>
+                    <div class="table-responsive">
+                        <table id="access_table" class="display"></table>
+                    </div>
+                  </div>
+                  <div id="explore" class="tab-pane fade">
+                    <br>
+                    <div class="table-responsive">
+                        <table id="explore_table" class="display"></table>
+                    </div>
+                  </div>
+                </div>
+            </div>      
+        </div>
+            
+        <div class="item col-sm-10 col-sm-offset-1">
+            <div class="panel">
+                <br>
+                <ul class="nav nav-pills">
+                  <li class="active"><a data-toggle="tab" href="#fair">Fairness</a></li>
+                  <li><a data-toggle="tab" href="#interpretible">Interpretability</a></li>
+                  <li><a data-toggle="tab" href="#environment">Environmental Impact</a></li>
+                </ul>
+              
+                <div class="tab-content">
+                  <div id="fair" class="tab-pane fade in active">
+                    <br>
+                    <div class="table-responsive">
+                        <table id="fair_table" class="display"></table>
+                    </div>
+                  </div>
+                  <div id="interpretible" class="tab-pane fade">
+                    <br>
+                    <div class="table-responsive">
+                        <table id="interpretible_table" class="display"></table>
+                    </div>
+                  </div>
+                  <div id="environment" class="tab-pane fade">
+                    <br>
+                    <div class="table-responsive">
+                        <table id="environment_table" class="display"></table>
+                    </div>
+                  </div>
+                </div>
+            </div>     
+        </div>
+    </body>
