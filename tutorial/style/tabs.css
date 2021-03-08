@@ -7,7 +7,7 @@
 
 .icon-tab span.glyphicon {
     display : block;
-    font-size: 35px;
+    font-size: 40px;
 
     color: #8d98b8;
 
@@ -36,13 +36,13 @@
 }
 
 .icon-tab.active span.glyphicon::before {
-    background: linear-gradient(to bottom right, #24C6DC, #514A9D);
+    background: linear-gradient(to bottom right, #24C6DC, rgba(187,137, 202 ,1.0));
 }
 
 
 .icon-label {
     color:  #b3b3b3;
-    font-size: 16px;  
+    font-size: 20px;  
   
     transition-duration: 0.35s;
 }
@@ -80,4 +80,8 @@
         padding-right: 10px;
         transition-duration: 0.25s;
     }
+}
+
+.nav{
+    font-size: 20px;
 }
