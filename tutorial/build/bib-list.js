@@ -2559,10 +2559,10 @@ var bibtexify = (function($) {
             var itemStr = '';
             if (entryData.url && entryData.url.match(/.*\.pdf/)) {
                 itemStr += ' [<a title="PDF-version of this article"  target="_blank" href="' +
-                            entryData.url + '">PDF<\/a>]';
+                            entryData.url + '">link<\/a>]';
             } else if (entryData.url) {
                 itemStr += ' [<a title="This article online" target="_blank" href="' + entryData.url +
-                            '">PDF<\/a>]';
+                            '">link<\/a>]';
             }
             return itemStr;
         },
