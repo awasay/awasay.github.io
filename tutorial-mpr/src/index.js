@@ -1,20 +1,16 @@
 const grid = new Grid({
-  sort: true,
-  search: true,
-  pagination: true,
-  columns: ['Location', 'Change Frequency', 'Priority'],
-  server: {
-    url: 'data/research.xml',
-    handle: (res) => {
-      return res.text().then(str => (new window.DOMParser()).parseFromString(str, "text/xml"));
-    },
-    then: data => {
-      return Array.from(data.querySelectorAll('url'))
-        .map(row => [
-          row.querySelector('loc').innerHTML,
-          row.querySelector('changefreq').innerHTML,
-          row.querySelector('priority').innerHTML,
-        ]);
-    }
-  }
+  columns: [{
+     id: 'name',
+     name: 'Name'
+  }, {
+     id: 'email',
+     name: 'Email'
+  }, {
+     id: 'phoneNumber',
+     name: 'Phone Number'
+  }],
+  data: [
+    { name: 'John', email: 'john@example.com', phoneNumber: '(353) 01 222 3333' },
+    { name: 'Mark', email: 'mark@gmail.com', phoneNumber: '(01) 22 888 4444' },
+  ]
 });
