@@ -1,10 +1,20 @@
-new gridjs.Grid({
-    columns: ["Name", "Email", "Phone Number"],
-    data: [
-      ["John", "john@example.com", "(353) 01 222 3333"],
-      ["Mark", "mark@gmail.com", "(01) 22 888 4444"],
-      ["Eoin", "eoin@gmail.com", "0097 22 654 00033"],
-      ["Sarah", "sarahcdd@gmail.com", "+322 876 1233"],
-      ["Afshin", "afshin@mail.com", "(353) 22 87 8356"]
-    ]
-  }).render(document.getElementById("wrapper"));
+const grid = new Grid({
+  sort: true,
+  search: true,
+  pagination: true,
+  columns: ['Location', 'Change Frequency', 'Priority'],
+  server: {
+    url: 'data/research.xml',
+    handle: (res) => {
+      return res.text().then(str => (new window.DOMParser()).parseFromString(str, "text/xml"));
+    },
+    then: data => {
+      return Array.from(data.querySelectorAll('url'))
+        .map(row => [
+          row.querySelector('loc').innerHTML,
+          row.querySelector('changefreq').innerHTML,
+          row.querySelector('priority').innerHTML,
+        ]);
+    }
+  }
+});
